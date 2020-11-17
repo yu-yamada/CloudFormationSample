@@ -1,0 +1,414 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    38856a80-5c3b-466d-b723-7d1aacdd6299:
+      size:
+        width: 430
+        height: 300
+      position:
+        x: 220
+        'y': 310
+      z: 0
+      embeds:
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 27be184e-b375-40f1-aeca-670e212e12f7
+    27be184e-b375-40f1-aeca-670e212e12f7:
+      size:
+        width: 160
+        height: 130
+      position:
+        x: 430
+        'y': 450
+      z: 1
+      parent: 38856a80-5c3b-466d-b723-7d1aacdd6299
+      embeds: []
+      iscontainedinside:
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+    e011adaf-a2b1-435c-9c5f-fc942c5db645:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 80
+        'y': 340
+      z: 0
+      embeds: []
+    dd393cf1-9ed2-4eb8-ae7b-28191e0b89c0:
+      source:
+        id: 38856a80-5c3b-466d-b723-7d1aacdd6299
+      target:
+        id: e011adaf-a2b1-435c-9c5f-fc942c5db645
+      z: 0
+    643e8fec-200c-452f-9131-f77d8c9f68bb:
+      size:
+        width: 130
+        height: 140
+      position:
+        x: 250
+        'y': 420
+      z: 1
+      parent: 38856a80-5c3b-466d-b723-7d1aacdd6299
+      embeds:
+        - 9e3b3eb9-f964-4ce5-948b-fdf889ca6fb7
+      iscontainedinside:
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+        - 38856a80-5c3b-466d-b723-7d1aacdd6299
+    9e3b3eb9-f964-4ce5-948b-fdf889ca6fb7:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 275
+        'y': 475
+      z: 2
+      parent: 643e8fec-200c-452f-9131-f77d8c9f68bb
+      embeds: []
+      iscontainedinside:
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+        - 643e8fec-200c-452f-9131-f77d8c9f68bb
+      dependson:
+        - dd393cf1-9ed2-4eb8-ae7b-28191e0b89c0
+        - e011adaf-a2b1-435c-9c5f-fc942c5db645
+    02d67d0e-31d9-42ac-af34-a8cd7e2c98ba:
+      source:
+        id: 643e8fec-200c-452f-9131-f77d8c9f68bb
+      target:
+        id: 27be184e-b375-40f1-aeca-670e212e12f7
+      z: 1
+    f5f3943a-68b8-4a54-8532-836408d2939c:
+      source:
+        id: 9e3b3eb9-f964-4ce5-948b-fdf889ca6fb7
+        selector: 'g:nth-child(1) g:nth-child(4) g:nth-child(8) circle:nth-child(1)     '
+        port: 'AWS::DependencyLink-*'
+      target:
+        id: dd393cf1-9ed2-4eb8-ae7b-28191e0b89c0
+      z: 4
+    63176562-2471-4b59-b455-d02be3db7a94:
+      source:
+        id: 9e3b3eb9-f964-4ce5-948b-fdf889ca6fb7
+        selector: 'g:nth-child(1) g:nth-child(4) g:nth-child(8) circle:nth-child(1)     '
+        port: 'AWS::DependencyLink-*'
+      target:
+        id: dd393cf1-9ed2-4eb8-ae7b-28191e0b89c0
+      z: 4
+Resources:
+  maruVpc:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      CidrBlock: 10.0.0.0/16
+      Tags: 
+        - Key: Name
+          Value: !Sub "maru-vpc"
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 38856a80-5c3b-466d-b723-7d1aacdd6299
+  maruSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref maruVpc
+      CidrBlock: 10.0.0.0/26
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 27be184e-b375-40f1-aeca-670e212e12f7
+  InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e011adaf-a2b1-435c-9c5f-fc942c5db645
+  VPCGatewayAttachment:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref maruVpc
+      InternetGatewayId: !Ref InternetGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: dd393cf1-9ed2-4eb8-ae7b-28191e0b89c0
+  PublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref maruVpc
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 643e8fec-200c-452f-9131-f77d8c9f68bb
+  PublicRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn: VPCGatewayAttachment
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      RouteTableId: !Ref PublicRouteTable
+      GatewayId: !Ref InternetGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9e3b3eb9-f964-4ce5-948b-fdf889ca6fb7
+  PublicSubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref maruSubnet
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 02d67d0e-31d9-42ac-af34-a8cd7e2c98ba
+Parameters:
+  InstanceType:
+    Description: WebServer EC2 instance type
+    Type: String
+    Default: t2.small
+    AllowedValues:
+      - t1.micro
+      - t2.nano
+      - t2.micro
+      - t2.small
+      - t2.medium
+      - t2.large
+      - m1.small
+      - m1.medium
+      - m1.large
+      - m1.xlarge
+      - m2.xlarge
+      - m2.2xlarge
+      - m2.4xlarge
+      - m3.medium
+      - m3.large
+      - m3.xlarge
+      - m3.2xlarge
+      - m4.large
+      - m4.xlarge
+      - m4.2xlarge
+      - m4.4xlarge
+      - m4.10xlarge
+      - c1.medium
+      - c1.xlarge
+      - c3.large
+      - c3.xlarge
+      - c3.2xlarge
+      - c3.4xlarge
+      - c3.8xlarge
+      - c4.large
+      - c4.xlarge
+      - c4.2xlarge
+      - c4.4xlarge
+      - c4.8xlarge
+      - g2.2xlarge
+      - g2.8xlarge
+      - r3.large
+      - r3.xlarge
+      - r3.2xlarge
+      - r3.4xlarge
+      - r3.8xlarge
+      - i2.xlarge
+      - i2.2xlarge
+      - i2.4xlarge
+      - i2.8xlarge
+      - d2.xlarge
+      - d2.2xlarge
+      - d2.4xlarge
+      - d2.8xlarge
+      - hi1.4xlarge
+      - hs1.8xlarge
+      - cr1.8xlarge
+      - cc2.8xlarge
+      - cg1.4xlarge
+    ConstraintDescription: must be a valid EC2 instance type.
+  KeyName:
+    Description: Name of an EC2 KeyPair to enable SSH access to the instance.
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+  SSHLocation:
+    Description: ' The IP address range that can be used to access the web server using SSH.'
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 0.0.0.0/0
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+Mappings:
+  AWSInstanceType2Arch:
+    t1.micro:
+      Arch: HVM64
+    t2.nano:
+      Arch: HVM64
+    t2.micro:
+      Arch: HVM64
+    t2.small:
+      Arch: HVM64
+    t2.medium:
+      Arch: HVM64
+    t2.large:
+      Arch: HVM64
+    m1.small:
+      Arch: HVM64
+    m1.medium:
+      Arch: HVM64
+    m1.large:
+      Arch: HVM64
+    m1.xlarge:
+      Arch: HVM64
+    m2.xlarge:
+      Arch: HVM64
+    m2.2xlarge:
+      Arch: HVM64
+    m2.4xlarge:
+      Arch: HVM64
+    m3.medium:
+      Arch: HVM64
+    m3.large:
+      Arch: HVM64
+    m3.xlarge:
+      Arch: HVM64
+    m3.2xlarge:
+      Arch: HVM64
+    m4.large:
+      Arch: HVM64
+    m4.xlarge:
+      Arch: HVM64
+    m4.2xlarge:
+      Arch: HVM64
+    m4.4xlarge:
+      Arch: HVM64
+    m4.10xlarge:
+      Arch: HVM64
+    c1.medium:
+      Arch: HVM64
+    c1.xlarge:
+      Arch: HVM64
+    c3.large:
+      Arch: HVM64
+    c3.xlarge:
+      Arch: HVM64
+    c3.2xlarge:
+      Arch: HVM64
+    c3.4xlarge:
+      Arch: HVM64
+    c3.8xlarge:
+      Arch: HVM64
+    c4.large:
+      Arch: HVM64
+    c4.xlarge:
+      Arch: HVM64
+    c4.2xlarge:
+      Arch: HVM64
+    c4.4xlarge:
+      Arch: HVM64
+    c4.8xlarge:
+      Arch: HVM64
+    g2.2xlarge:
+      Arch: HVMG2
+    g2.8xlarge:
+      Arch: HVMG2
+    r3.large:
+      Arch: HVM64
+    r3.xlarge:
+      Arch: HVM64
+    r3.2xlarge:
+      Arch: HVM64
+    r3.4xlarge:
+      Arch: HVM64
+    r3.8xlarge:
+      Arch: HVM64
+    i2.xlarge:
+      Arch: HVM64
+    i2.2xlarge:
+      Arch: HVM64
+    i2.4xlarge:
+      Arch: HVM64
+    i2.8xlarge:
+      Arch: HVM64
+    d2.xlarge:
+      Arch: HVM64
+    d2.2xlarge:
+      Arch: HVM64
+    d2.4xlarge:
+      Arch: HVM64
+    d2.8xlarge:
+      Arch: HVM64
+    hi1.4xlarge:
+      Arch: HVM64
+    hs1.8xlarge:
+      Arch: HVM64
+    cr1.8xlarge:
+      Arch: HVM64
+    cc2.8xlarge:
+      Arch: HVM64
+  AWSRegionArch2AMI:
+    us-east-1:
+      HVM64: ami-0ff8a91507f77f867
+      HVMG2: ami-0a584ac55a7631c0c
+    us-west-2:
+      HVM64: ami-a0cfeed8
+      HVMG2: ami-0e09505bc235aa82d
+    us-west-1:
+      HVM64: ami-0bdb828fd58c52235
+      HVMG2: ami-066ee5fd4a9ef77f1
+    eu-west-1:
+      HVM64: ami-047bb4163c506cd98
+      HVMG2: ami-0a7c483d527806435
+    eu-west-2:
+      HVM64: ami-f976839e
+      HVMG2: NOT_SUPPORTED
+    eu-west-3:
+      HVM64: ami-0ebc281c20e89ba4b
+      HVMG2: NOT_SUPPORTED
+    eu-central-1:
+      HVM64: ami-0233214e13e500f77
+      HVMG2: ami-06223d46a6d0661c7
+    ap-northeast-1:
+      HVM64: ami-06cd52961ce9f0d85
+      HVMG2: ami-053cdd503598e4a9d
+    ap-northeast-2:
+      HVM64: ami-0a10b2721688ce9d2
+      HVMG2: NOT_SUPPORTED
+    ap-northeast-3:
+      HVM64: ami-0d98120a9fb693f07
+      HVMG2: NOT_SUPPORTED
+    ap-southeast-1:
+      HVM64: ami-08569b978cc4dfa10
+      HVMG2: ami-0be9df32ae9f92309
+    ap-southeast-2:
+      HVM64: ami-09b42976632b27e9b
+      HVMG2: ami-0a9ce9fecc3d1daf8
+    ap-south-1:
+      HVM64: ami-0912f71e06545ad88
+      HVMG2: ami-097b15e89dbdcfcf4
+    us-east-2:
+      HVM64: ami-0b59bfac6be064b78
+      HVMG2: NOT_SUPPORTED
+    ca-central-1:
+      HVM64: ami-0b18956f
+      HVMG2: NOT_SUPPORTED
+    sa-east-1:
+      HVM64: ami-07b14488da8ea02a0
+      HVMG2: NOT_SUPPORTED
+    cn-north-1:
+      HVM64: ami-0a4eaf6c4454eda75
+      HVMG2: NOT_SUPPORTED
+    cn-northwest-1:
+      HVM64: ami-6b6a7d09
+      HVMG2: NOT_SUPPORTED
+Outputs:
+    maruVpcId:
+        Value: !Ref maruVpc
+        Export: 
+            Name: maruVpcId
